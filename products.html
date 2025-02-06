@@ -98,30 +98,7 @@
     </Section>
     <!-- Javascript code for search function -->
     <script src="index.js">
-        // search functionality
-
-        var productContainer = document.getElementById("product-container")
-        var search = document.getElementById("search")
-        // select all div from big div 
-        var nameList = productContainer.querySelectorAll("div")
-        console.log(nameList)
-
-        search.addEventListener("keyup", function () {
-            enteredValues = event.target.value.toUpperCase()
-            for (count = 0; count < nameList.length; count = count + 1) {
-
-                if (nameList[count].textContent.toUpperCase().indexOf(enteredValues) < 0) {
-                    nameList[count].style.display = "none"
-                }
-                else {
-                    nameList[count].style.display = "block"
-                }
-
-
-            }
-
-        })
-
+       
     </script>
 </body>
 
