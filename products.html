@@ -1,85 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenden products</title>
-    
+
     <!-- Tailwind CSS cdn link from jsdeliver.com -->
 
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
+
 <body>
     <!-- navbar -->
-     <section class="bg-green-100 flex justify-between p-5 items-center shadow-xl sticky top-0 z-10">
+    <section class="bg-green-100 flex justify-between p-5 items-center shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl font-bold">Greenden</h1>
         <ul class=" hidden md:flex justify-around gap-5">
             <li><a href="#">Home</a></li>
             <li><a href="./products.html" target="_blank">Products</a></li>
             <li><a href="./contact.html" target="_blank">Contact</a></li>
         </ul>
-         <!-- menu icon from heroicons -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-     </section>
-
-     <!-- our products -->
-      <section class="text-center p-5 mt-5  ">
+        <!-- menu icon from heroicons -->
+        <svg xmlns="http://www.w3.org/2000/svg" id="menu_icon" class="h-6 w-6 pointer md:hidden  " fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="cursor: pointer;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </section>
+    <!-- side navbar -->
+    <section id="sidenav" class="bg-green-100 z-30 fixed top-0 right-0 hidden" style="width:30%; height:100vh;">
+        <div class=" text-right">
+            <p id="side_navbar_close" class="bg-green-100 m-5 " style="cursor: pointer;">X</p>
+        </div>
+        <ul id="side_navbar" class="gap-10 text-gray-600 bg-green-100 flex flex-col items-center  ">
+            <li class="hover:underline hover:text-black"><a href="./index.html" target="_blank">Home</a></li>
+            <li class="hover:underline hover:text-black"><a href="./products.html" target="_blank">Products</a></li>
+            <li class="hover:underline hover:text-black"><a href="./contact.html" target="_blank">Contacts</a></li>
+        </ul>
+    </section>
+    <!-- our products -->
+    <section class="text-center p-5 mt-5  ">
         <h1 class="font-bold text-2xl mt-3"> Our Products </h1>
-        <input type="text" placeholder="Search for a product.." class="border border-black p-2 rounded w3 m-5"  style="width:80%;"> 
-        <div class="grid grid-cols-2 gap-3 md:grid-cols-4 ">
+        <input type="text" placeholder="Search for a product.." class="border border-black p-2 rounded w3 m-5"
+            style="width:80%;" id="search">
+        <div class="grid grid-cols-2 gap-3 md:grid-cols-4 " id="product-container">
             <div>
                 <img src="./images/best-seller-1.png" class="inline transform hover:-translate-y-2">
-                <p>Rose pot</p>
+                <h1>Rose pot</h1>
                 <p>$50</p>
             </div>
             <div>
-                <img src="./images/best-seller-2.png" class="inline transform hover:-translate-y-2" >
-                <p>lilly pot</p>
+                <img src="./images/best-seller-2.png" class="inline transform hover:-translate-y-2">
+                <h1>lilly pot</h1>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/best-seller-3.png" class="inline transform hover:-translate-y-2">
-                <p>jasmine pot</p>
+                <h1>jasmine pot</h1>
                 <p>$90</p>
             </div>
             <div>
                 <img src="./images/best-seller-4.png" class="inline transform hover:-translate-y-2">
-                <p>flower pot</p>
+                <h1>flower pot</h1>
                 <p>$60</p>
             </div>
             <div>
                 <img src="./images/best-seller-1.png" class="inline transform hover:-translate-y-2">
-                <p>Rose pot</p>
+                <h1>Rose pot</h1>
                 <p>$50</p>
             </div>
             <div>
                 <img src="./images/best-seller-2.png" class="inline transform hover:-translate-y-2 ">
-                <p>lilly pot</p>
+                <h1>lilly pot</h1>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/best-seller-3.png" class="inline transform hover:-translate-y-2">
-                <p>jasmine pot</p>
+                <h1>jasmine pot</h1>
                 <p>$90</p>
             </div>
             <div>
                 <img src="./images/best-seller-4.png" class="inline transform hover:-translate-y-2">
-                <p>jasmine pot</p>
+                <h1>jasmine pot</h1>
                 <p>$90</p>
             </div>
         </div>
 
-      </section>
+    </section>
 
-      <!-- footer section -->
-      <Section class="bg-green-100 p-5 mt-5 grid gap-5">
+    <!-- footer section -->
+    <Section class="bg-green-100 p-5 mt-5 grid gap-5">
         <h1 class="text-2xl font-bold ">Greenden</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dignissimos tempore tempora consequatur tenetur eaque.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dignissimos tempore tempora consequatur
+            tenetur eaque.</p>
         <p>@ 2021 greendy.com</p>
-      </Section>
+    </Section>
+    <!-- Javascript code for search function -->
+    <script src="index.js">
+        // search functionality
+
+        var productContainer = document.getElementById("product-container")
+        var search = document.getElementById("search")
+        // select all div from big div 
+        var nameList = productContainer.querySelectorAll("div")
+        console.log(nameList)
+
+        search.addEventListener("keyup", function () {
+            enteredValues = event.target.value.toUpperCase()
+            for (count = 0; count < nameList.length; count = count + 1) {
+
+                if (nameList[count].textContent.toUpperCase().indexOf(enteredValues) < 0) {
+                    nameList[count].style.display = "none"
+                }
+                else {
+                    nameList[count].style.display = "block"
+                }
+
+
+            }
+
+        })
+
+    </script>
 </body>
+
 </html>
